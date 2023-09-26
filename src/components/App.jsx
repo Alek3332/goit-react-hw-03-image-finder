@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import axios from 'axios';
 import Notiflix from 'notiflix';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Searchbar } from './Searchbar/Searchbar';
@@ -130,3 +130,8 @@ export class App extends Component {
     );
   }
 }
+
+ App.propTypes = {
+   onSubmit: PropTypes.string.isRequired,
+   searchValue: PropTypes.string.isRequired,
+ };
